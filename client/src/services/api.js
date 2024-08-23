@@ -1,6 +1,10 @@
+import config from "config";
+
+const API_BASE_URL = config.API_BASE_URL;
+
 export const fetchUsers = async () => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/users`);
+    const response = await fetch(`${API_BASE_URL}/users`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -13,7 +17,7 @@ export const fetchUsers = async () => {
 
 export const fetchPopularTVShows = async () => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/popular-tv-shows`);
+    const response = await fetch(`${API_BASE_URL}/popular-tv-shows`);
     return await response.json();
   } catch (error) {
     console.error('Error fetching popular TV shows:', error);

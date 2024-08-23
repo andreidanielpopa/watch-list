@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchUsers } from '../services/api';
+import { fetchUsers } from 'services/api';
 
 function Login () {
     const [users, setUsers] = useState([]);
