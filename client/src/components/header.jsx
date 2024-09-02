@@ -9,10 +9,9 @@ const Header = () => {
         <span className="text-yellow-400">LIST</span>
       </div>
 
-      <nav className="flex space-x-16 font-light">
+      <nav className="flex space-x-16 font-normal">
         <a href="#" className="text-white hover:text-gray-300">TV Shows</a>
         <a href="#" className="text-white hover:text-gray-300">Movies</a>
-        <a href="#" className="text-white hover:text-gray-300">WatchLists</a>
         <a href="#" className="text-white hover:text-gray-300">Login</a>
         <a href="#" className="text-white hover:text-gray-300">
           <svg
@@ -21,7 +20,7 @@ const Header = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth="1"
+            strokeWidth="2"
           >
             <path
               strokeLinecap="round"
