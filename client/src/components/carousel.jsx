@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay  } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { fetchPopularTVShows } from 'services/api';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -9,22 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const CarruselSeries = () => {
-  const [shows, setShows] = useState([]);
-
-  useEffect(() => {
-    const getPopularTVShows = async () => {
-      try {
-        const showsData = await fetchPopularTVShows();
-        setShows(showsData);
-      } catch (error) {
-        console.error('Error fetching popular TV shows:', error);
-      }
-    };
-
-    getPopularTVShows();
-  }, []);
-
+const CarruselSeries = ({ data }) => {
   return (
     <div className="relative w-full overflow-hidden">
       <Swiper
@@ -39,7 +23,7 @@ const CarruselSeries = () => {
           }}
         className="my-swiper"
       >
-        {shows.map((serie) => (
+        {data.map((serie) => (
           <SwiperSlide key={serie.id} className="p-2">
             <a href="#">
                 <img
