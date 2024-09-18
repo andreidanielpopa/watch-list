@@ -6,5 +6,17 @@
 
 body{
     font-family: "Inter";
-    background-color: #1F2937;
+    background-color: #0f172a;
+    color: white;
 }
+
+.my-swiper .swiper-pagination-bullet {
+    background-color: #ddd; /* Color de los puntos de paginación */
+    width: 8px; /* Tamaño de los puntos de paginación */
+    height: 8px; /* Tamaño de los puntos de paginación */
+    border-radius: 50%; /* Forma circular */
+  }
+  
+  .my-swiper .swiper-pagination-bullet-active {
+    background-color: #facc15; /* Color del punto activo */
+  }
